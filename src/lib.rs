@@ -25,5 +25,10 @@ extern crate cast;
 pub mod led;
 pub mod serial;
 pub mod timer;
+//pub mod button;
+
+// non-board stuff
+//pub mod lcd;
+//pub mod rotary_encoder;
 
 mod frequency;
