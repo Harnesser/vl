@@ -83,7 +83,7 @@ impl<'a> Timer6<'a> {
     pub fn init(&self, rcc: &Rcc, frequency: u32) {
         let tim6 = self.0;
 
-        rcc.apb1enr.modify(|_, w| unsafe { w.tim7en().bits(1) });
+        rcc.apb1enr.modify(|_, w| unsafe { w.tim6en().bits(1) });
 
         let ratio = frequency::APB1 / frequency;
         let psc = u16(((ratio - 1) / u32(u16::MAX))).unwrap();
